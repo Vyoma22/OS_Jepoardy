@@ -1,12 +1,18 @@
 /*
  * Tutorial 4 Jeopardy Project for SOFE 3950U / CSCI 3020U: Operating Systems
- *
- * Copyright (C) 2015, <GROUP MEMBERS>
+ * CRN 74027 / Group 13 / Project: Jeopardy Game
+
+ * Copyright (C) 2015,
+ * Vyoma Shah
+ * Maisha Zarrin Subha
+ * Wang Ying Su
+ * Marwan Allam
  * All rights reserved.
  *
  */
-#ifndef PLAYERS_H_
-#define PLAYERS_H_
+
+#ifndef PLAYERSH
+#define PLAYERSH
 
 #include <stdbool.h>
 
@@ -19,10 +25,10 @@ typedef struct {
 } player;
 
 // Returns true if the player name matches one of the existing players
-extern bool player_exists(player *players, int num_players, char *name);
+extern bool player_exists(player players, int num_players, charname);
 
-// Go through the list of players and update the score for the 
+// Go through the list of players and update the score for the
 // player given their name
-extern void update_score(player *players, int num_players, char *name, int score);
+extern void update_score(player players, int num_players, charname, int score);
 
-#endif /* PLAYERS_H_ */
+#endif /* PLAYERSH */

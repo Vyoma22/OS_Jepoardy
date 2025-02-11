@@ -1,7 +1,13 @@
+
 /*
  * Tutorial 4 Jeopardy Project for SOFE 3950U / CSCI 3020U: Operating Systems
- *
- * Copyright (C) 2015, <GROUP MEMBERS>
+ * CRN 74027 / Group 13 / Project: Jeopardy Game
+
+ * Copyright (C) 2015,
+ * Vyoma Shah
+ * Maisha Zarrin Subha
+ * Wang Ying Su
+ * Marwan Allam
  * All rights reserved.
  *
  */
@@ -21,27 +27,14 @@ bool player_exists(player *players, int num_players, char *name)
     return false;
 }
 
-// Go through the list of players and update the score for the 
+// Go through the list of players and update the score for the
 // player given their name
 void update_score(player *players, int num_players, char *name, int score)
 {
     for (int i = 0; i < num_players; i++) {
-        if (strcmp(players[i].score += score;
-            break;
-    }
-}
-    
-}
-
-//Initialize players, prompt for their name, and set their scores to 0
-void initialize_players(player *players, int num_players)
-{
-    for (int i = 0; i < num_players; i++) {
-printf("Enter name for player %d: ", i + 1);
-fgets(players[i].name, 50, stdin);
-
-players[i].name[strcspn(players[1].name, "\n")] = '\0';
-
-players[i].score = 0;
+        if (strcmp(players[i].name, name) == 0) {
+            players[i].score += score;
+            return;
+        }
     }
 }

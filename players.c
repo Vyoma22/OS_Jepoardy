@@ -32,3 +32,16 @@ void update_score(player *players, int num_players, char *name, int score)
 }
     
 }
+
+//Initialize players, prompt for their name, and set their scores to 0
+void initialize_players(player *players, int num_players)
+{
+    for (int i = 0; i < num_players; i++) {
+printf("Enter name for player %d: ", i + 1);
+fgets(players[i].name, 50, stdin);
+
+players[i].name[strcspn(players[1].name, "\n")] = '\0';
+
+players[i].score = 0;
+    }
+}
